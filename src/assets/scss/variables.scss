@@ -1,0 +1,82 @@
+// 主色
+$color-primary: #247bcc; //整体主色、菜单栏背景、控件边框色、当前状态文字颜色
+
+$emphasize-btn: #bdd7f0; // 菜单、按钮、文字按钮hover颜色
+
+$color-text-normal: #212121; // 标题默认字体颜色
+
+$global-bg: #e5f0ff; //全局背景色
+
+$btn-disabled: #f1f1f1; // 不可用按钮颜色
+
+$lines-dividing: #e5e5e5; // 分割线、表格
+
+$table-hover: #bdd7f0; // 表格hover颜色
+
+$module-bg-color: #fff;
+
+
+// 1. 字体 大小
+$font-size-18: 18px;
+$font-size-16: 16px;
+$font-size-14: 14px;
+$font-size-12: 12px;
+
+// 2.1  文字颜色
+$text-normal: #606266;
+$text-hover: #1192ee;
+$text-pressed: #247bcc;
+$text-disable: #727278;
+$text-color-title: #212121; // 标题字体颜色
+$text-secondary: #c4c4c4;
+$text-standing: #e8e8e8;
+
+
+// 2.2 强调按钮文字颜色
+$emphasize-text-normal: #237acb;
+$emphasize-text-hover: #5a92c5;
+$emphasize-text-pressed: #247acc;
+$emphasize-text-disable: #91abc5;
+
+// 3.1 边框颜色
+$border-normal: #c4c4c4;
+$border-hover: #1192ee;
+$border-pressed: #1192ee;
+$border-disable: #c4c4c4;
+
+// 3.2 强调边框颜色
+$emphasize-border-normal: #0c83d7;
+$emphasize-border-hover: #0c83d7;
+$emphasize-border-pressed: #247bcc;
+$emphasize-border-disable: #5a92c5;
+
+// 4. 模块背景颜色 
+$panel-bg: #bdd7f0;
+$panel-bg-hover: #e7f4fd;
+$panel-bg-pressed: #fff;
+$panel-bg-disable: #c4c4c4; // 不可用按钮颜色
+$panel-bg-header: #247bcb; //导航 header
+$panel-bg-th: #e7f4fd;
+
+// 5. 辅助色
+$auxiliary-module-tag: #e67001; // 模块、标签选中的颜色
+$auxiliary-screen-active: #24b20a; // 屏幕选中的颜色
+$auxiliary-orange-active: #e67007; // 屏幕选中的颜色
+$auxiliary-abnormal: #ff3333;
+$auxiliary-module-inside-bg: #1e1e28; // 用3标签卡未选0F、模块7标题背景的颜色
+
+// 6. 警告色
+$red-warning-bg: #e4cbbe;
+$red-warning-border:#f56c6c;
+
+// 7. 透明图层
+$rgba-white-7: rgba(255, 255, 255, 0.07);
+$rgba-white-10: rgba(255, 255, 255, 0.1);
+$rgba-white-15: rgba(255, 255, 255, 0.15);
+$rgba-black-15: rgba(0, 0, 0, 0.15);
+$rgba-black-30: rgba(0, 0, 0, 0.3);
+$rgba-black-50: rgba(0, 0, 0, 0.5);
+$rgba-black-60: rgba(0, 0, 0, 0.6);
+$rgba-black-70: rgba(0, 0, 0, 0.7);
+$rgba-black-80: rgba(0, 0, 0, 0.8);
+$rgba-blue-65: rgba(0, 61, 121, 0.65);

@@ -1,0 +1,365 @@
+// 操作按钮
+.operation-btn {
+  cursor: pointer;
+  color: #2F7E7D; // xj byyuwen
+  margin: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.relative {
+  position: relative;
+}
+
+
+// 输入框 长度
+.md-input .el-input__inner {
+  width: 350px;
+}
+.lg-input .el-input__inner {
+  width: 400px;
+}
+
+.lg-input2 .el-input__inner {
+  width: 300px;
+}
+
+// @media screen and (min-width:1200px) and (max-width:1367px){
+//   .lg-input .el-input__inner {
+//     width: 160px;
+//   }
+// }
+// @media screen and (max-width:1666px){
+//   .lg-input .el-input__inner {
+//     width: 160px;
+//   }
+// }
+
+.md-input50 .el-input__inner,
+.md-input50 .el-textarea__inner {
+  width: 50%;
+}
+
+.md-input30 .el-input__inner,
+.md-input30 .el-textarea__inner {
+  width: 30%;
+}
+
+.md-input70 .el-input__inner,
+.md-input70 .el-textarea__inner {
+  width: 70%;
+}
+.el-input__inner{
+  color: #2c3e50;
+}
+// 边距
+.marginl16 {
+  margin-left: 16px !important;
+}
+
+.marginl20 {
+  margin-left: 20px !important;
+}
+.marginr20 {
+  margin-right: 20px !important;
+}
+
+.marginl24 {
+  margin-left: 24px !important;
+}
+
+.marginlr24 {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+
+.marginlr14 {
+  margin-left: 14px !important;
+  margin-right: 14px !important;
+}
+
+.margint0 {
+  margin-top: 0px !important;
+}
+
+.margintb24 {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+
+.marginb20 {
+  margin-bottom: 20px !important;
+}
+
+.margint24 {
+  margin-top: 24px !important;
+}
+.marginr6 {
+  margin-right: 6px !important;
+}
+.margint16 {
+  margin-top: 16px !important;
+}
+.marginb12 {
+  margin-bottom: 12px !important;
+}
+.marginb16 {
+  margin-bottom: 16px !important;
+}
+
+.paddingt0 {
+  padding-top: 0 !important;
+}
+
+
+.paddingtb24 {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.paddingt10 {
+  padding-top: 10px !important;
+}
+
+.paddingl10 {
+  padding-left: 10px !important;
+}
+.paddingl20 {
+  padding-left: 20px !important;
+}
+.paddingl24 {
+  padding-left: 24px !important;
+}
+
+.paddingt12 {
+  padding-top: 12px !important;
+}
+
+.paddingt24 {
+  padding-top: 24px !important;
+}
+
+.paddingb12 {
+  padding-bottom: 12px !important;
+}
+
+.paddingb24 {
+  padding-bottom: 24px !important;
+}
+
+.bgfff {
+  background-color: #ffffff !important;
+}
+
+.colorfff {
+  color: #ffffff !important;
+}
+
+// 换行点点点
+.title-ellipsis {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.desc-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.left-divider:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background: #cccccc;
+  top: 10%;
+  right: 20%;
+}
+
+
+//by yuekang
+// table内容高度
+.el-table .cell {
+  // height: 21px;
+  line-height: 21px !important;
+  white-space: pre-line;  // 列表换行
+}
+
+// yuwen start
+.el-table .el-table__header th>.cell {
+  font-weight: 500 !important;
+}
+
+.el-table th.gutter {
+  display: table-cell !important;
+}
+
+// 给数据表格添加统一的样式
+.el-table thead {
+  // color: #2476c2;
+  color: #2F7E7D; // xj byyuwen
+}
+
+.el-table__body-wrapper>table>tbody>tr:nth-of-type(even) {
+  background: #e9f4fe;
+}
+
+.el-table__header-wrapper>table>thead>tr>th {
+  background: #e9f4fe;
+}
+
+// table边框颜色
+.el-table--border:after,
+.el-table--group:after,
+.el-table:before {
+  background: #e9f4fe;
+  border: 1px solid #f1f1f1;
+}
+
+.el-table--border,
+.el-table--group {
+  border-color: #f1f1f1;
+}
+
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.el-table--border th,
+.el-table--border th.gutter:last-of-type {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.el-table--border td,
+.el-table--border th {
+  border-right: 1px solid #f1f1f1;
+}
+
+// .el-table th, .el-table td{
+//   padding: 12px 0;
+// }
+// 两行 表头高度
+.two-lines.el-table thead th,
+.two-lines.el-table thead td {
+  padding: 4px 0;
+}
+
+// input倒角、高度
+.el-form-item__content {
+  line-height: 30px !important;
+}
+
+.el-form-item__label {
+  height: 32px !important;
+  line-height: 32px !important;
+}
+
+//  el-input__inner  不建议height固定值!important   by yuwen
+.el-input__inner {
+  height: 32px;
+  border-radius: 2px !important;
+}
+
+//  因el-input__inner设高故图标位置更改  size="mini"  by yuwen 
+
+
+.el-range-editor--mini .el-range__icon,
+.el-range-editor--mini .el-range__close-icon,
+.el-range-editor--mini .el-range-separator {
+  line-height: 24px !important;
+}
+
+.btn-font-size {
+  font-size: 16px;
+
+  i {
+    font-size: 14px;
+  }
+}
+
+.el-button--mini {
+  // padding: 9px 15px !important;
+  padding: 7px 13px !important;
+}
+
+/*表单字字对齐*/
+.info-form .el-form-item label:after {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+}
+
+.info-form  .el-form-item__label {
+  text-align: justify;
+}
+/* 这里去除必选字段的*,这个符号会造成一定影响,去掉之后我用了li列表进行定位,在前面加上" * ". */
+.info-form  .el-form-item.is-required .el-form-item__label:before {
+  content: none !important;
+}
+
+
+.w2{
+  letter-spacing:25px!important; /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-2）/(2-1)=2em */
+  margin-right:-25px!important; /*同上*/
+}
+.w3{
+  letter-spacing:0.5em;  /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-3）/(3-1)=0.5em */
+  margin-right:-0.5em;/*同上*/  
+}
+// 性　　别
+/*表单字字对齐结束*/
+/*全局滚动条样式*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+/* background-color: #01c8dc;
+border-radius: 3px; */
+  background-color: #b6b6b6;
+}
+/*全局滚动条样式结束*/
+
+/* el-table 滚动条样式 */
+.el-table--scrollable-y .el-table__body-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.el-table--scrollable-y .el-table__body-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.el-table--scrollable-y .el-table__body-wrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.el-table__header-wrapper .has-gutter th:nth-last-child(2) {
+  border-right: 0;
+}
+
+.el-table__fixed::before, .el-table__fixed-right::before{
+  height: 0;
+}
+/* el-table 滚动条样式结束 */
+
+.phone-title {
+  color: #999999;
+  font-size: 14px;
+}

@@ -1,0 +1,511 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-variables.scss';
+@import './common.scss';
+
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+/* structural elements 结构元素 */
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+/* list elements 列表元素 */
+pre,
+/* text formatting elements 文本格式元素 */
+fieldset,
+lengend,
+button,
+input,
+textarea,
+/* form elements 表单元素 */
+th,
+td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container全局样式
+.app-wrapper {
+  background: #eff8fa;
+}
+
+.app-container {
+  padding: 20px;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 89;
+  height: 56px;
+  // -webkit-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  // box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  // background: $--color-primary;
+}
+
+.searchformFirst {
+  .el-form-item:first-child {
+    padding-left: 0px;
+  }
+  // .breakfFirst.el-form-item {
+  //   padding-left: 0px;
+  // }
+}
+@media screen and (max-width: 1666px) {
+  .searchformFirst {
+    .breakfFirst.el-form-item {
+      padding-left: 0px;
+    }
+  
+  }
+}
+// 表单
+.el-form-item__content {
+  line-height: 30px;
+}
+
+.el-form-item {
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.el-form-item__label {
+  height: 30px;
+  line-height: 30px;
+}
+
+// 分割线上下间距过大
+.el-divider--horizontal {
+  margin: 10px 0 20px;
+}
+
+// checkBox  换行后 首个 多缩进
+.el-checkbox.is-bordered+.el-checkbox.is-bordered {
+  margin-left: 0;
+}
+
+// 面包屑
+.breadcrumb-box {
+  color: #666666;
+  font-size: 14px;
+  background-color: #EAF2F2;
+  padding-bottom: 16px;
+
+  .crumb-item {
+    cursor: pointer;
+    color: #666666;
+  }
+
+  .clearance {
+    margin: 0 10px;
+  }
+
+  .crumb-last {
+    cursor: pointer;
+    font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+    font-weight: 700;
+    font-size: 18px;
+    color: #2F7E7D; // xj byyuwen
+  }
+}
+
+// 模态框
+.el-dialog__body {
+  padding: 10px 30px 20px;
+}
+
+.dialog-footer {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+
+  button {
+    width: 80px;
+    height: 32px;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+    font-weight: 700;
+    line-height: 6px;
+  }
+
+  .cancel-btn {
+    background: #cfe8ff;
+    color: #2F7E7D; // xj byyuwen
+  }
+
+  .determine-btn {
+    background: #2F7E7D; // xj byyuwen
+    color: #ffffff;
+  }
+}
+
+// 分页
+
+
+.content {
+
+  margin: 16px;
+
+  .page-search,
+  .page-table {
+    background: #ffffff;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+
+  .page-search {
+    padding-top: 24px;
+  }
+
+  .page-form {
+    background: #ffffff;
+  }
+
+  .pages-modules {
+    background: #ffffff;
+    padding: 30px 30px 60px;
+  }
+}
+
+.dispaly-block {
+  background: #ffffff;
+  display: block;
+}
+
+// 模态框表单
+.label100 {
+  .el-form-item__label {
+    width: 100%;
+    text-align: left;
+  }
+
+  .el-select {
+    width: 100%;
+  }
+
+  .el-date-editor.el-input,
+  .el-date-editor.el-input__inner {
+    width: 100%;
+  }
+
+  .el-cascader {
+    width: 100%;
+  }
+}
+
+// 自定义表单
+.custom-btn {
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+  font-weight: 700;
+}
+
+// 取消
+.custom-btn0 {
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+  font-weight: 700;
+}
+
+// 确定
+.custom-btn1 {
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+  font-weight: 700;
+}
+
+
+// 间隔
+.nav-column {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  color: #333333;
+
+  p {
+    font-size: 14px;
+    font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  h5 {
+    font-size: 24px;
+    font-family: PingFang SC Bold, PingFang SC Bold-Bold;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.interval15 {
+  height: 15px;
+  background-color: #EAF2F2;
+}
+
+.sign-tag {
+  border-left: 3px solid #2F7E7D; // xj byyuwen
+  padding-left: 16px;
+}
+
+// 全局图标颜色
+.iconfont {
+  color: #2F7E7D; // xj byyuwen
+}
+
+.md-select3 {
+  min-width: 300px;
+}
+.md-select2 {
+  min-width: 216px;
+}
+@media screen and (min-width: 1666px) {
+  .md-select2,.md-select20,.md-select21{
+    min-width: 300px;
+  }
+}
+// 去随访 时间轴
+// .contact-number {
+//   width: 430px;
+// }
+.lg_select {
+  .contact-number {
+     width: calc(100% - 156px);
+  }
+}
+// 列表操作tub
+.list-operating {
+  font-size: 20px !important;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+// 360 
+.icon360shitu.list-operating {
+  font-size: 24px !important;
+}
+
+
+// 随访图标
+// .iconGreen {
+//   background: #12bf1d;
+// }
+
+// .iconRed {
+//   background: #e23f2f;
+// }
+
+// .iconBlue {
+//   background: #2476c2;
+// }
+.iconGreen {
+  background: #2f7e7d;
+}
+
+.iconRed {
+  background: #2f7e7d;
+}
+
+.iconBlue {
+  background: #2f7e7d;
+}
+
+
+
+.iconXJGreen {
+  background: #2f7e7d;
+}
+
+
+.operationBtn {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  z-index: 10;
+
+  li {
+    display: inline-block;
+    margin-right: 20px;
+
+    button {
+      background: #2f7e7d;
+      border-radius: 2px;
+      color: #fff;
+    }
+
+    &:last-child button {
+      background: #2f7e7d;
+      color: #fff;
+    }
+  }
+}
+
+
+.iconfontStartRecprd,
+.iconfontEndRecprd {
+  font-size: 30px !important;
+  padding: 0px 0px 0px 0px !important;
+  border: none !important;
+}
+
+
+
+//  模板下载
+.down-template {
+  color: #ffffff;
+  cursor: pointer;
+}
+// 至   （开始时间至结束时间）
+.el-date-editor .el-range-separator {
+  min-width: 24px;
+}
+
+
+// 模态框 表单
+.dialog-form{
+  .el-form-item{
+    padding-left: 0px;
+  }
+  .el-form-item--mini.el-form-item{
+        margin-bottom: 12px;
+  }
+}
+
+.elect100 {
+  .el-select.el-select--mini {
+    width: 100%;
+  }
+}
+
+//高级检索 start
+
+.selectTopicDialog .tabs-content-wrapper {
+  display: flex;
+
+  .scroll-left {
+    max-height: 580px;
+    flex: 0 0 130px;
+  }
+
+  .scroll-right {
+    flex: 1;
+    max-height: 580px;
+    overflow: auto;
+
+    .module-search-item {
+      margin: 0 20px 0;
+
+      .mix-field li h3 {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .mix-field li .mix-field-two ol {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          margin-top: 10px;
+          margin-right: 20px;
+          line-height: 20px;
+
+          span {
+            color: #2476c2;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+//高级检索 end

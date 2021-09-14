@@ -1,0 +1,124 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin pct($pct) {
+  width: #{$pct};
+  position: relative;
+  margin: 0 auto;
+}
+
+@mixin triangle($width, $height, $color, $direction) {
+  $width: $width/2;
+  $color-border-style: $height solid $color;
+  $transparent-border-style: $width solid transparent;
+  height: 0;
+  width: 0;
+
+  @if $direction==up {
+    border-bottom: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==right {
+    border-left: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+
+  @else if $direction==down {
+    border-top: $color-border-style;
+    border-left: $transparent-border-style;
+    border-right: $transparent-border-style;
+  }
+
+  @else if $direction==left {
+    border-right: $color-border-style;
+    border-top: $transparent-border-style;
+    border-bottom: $transparent-border-style;
+  }
+}
+
+@mixin space($direction) {
+  @if $direction==top {
+    margin-top: 10px;
+  }
+
+  @else if $direction==right {
+    margin-right: 10px;
+  }
+
+  @else if $direction==bottom {
+    margin-bottom: 10px;
+  }
+
+  @else if $direction==left {
+    margin-left: 10px;
+  }
+}
+//flex布局复用
+@mixin flex($hov:space-between,$col:center){
+  display:flex;
+  justify-content:$hov;
+  align-items:$col;
+}
+@mixin bgImg($w:0,$h:0,$img:'',$size:contain){
+  display:inline-block;
+  width:$w;
+  height:$h;
+  background:url($img) no-repeat center;
+  background-size:$size;
+}
+@mixin position($pos:absolute,$top:0,$left:0,$w:100%,$h:100%){
+  position:$pos;
+  top:$top;
+  left:$left;
+  width:$w;
+  height:$h;
+}
+@mixin positionImg($pos:absolute,$top:0,$right:0,$w:0,$h:0,$img:''){
+  position:$pos;
+  top:$top;
+  right:$right;
+  width:$w;
+  height:$h;
+  background:url($img) no-repeat center;
+  background-size:contain;
+}
+@mixin height($h:0,$lh:$h) {
+  height: $h;
+  line-height: $lh;
+}
+@mixin wH($w:0,$h:0) {
+  width:$w;
+  height:$h;
+}
+@mixin border($bw:1px,$bc:$colorF,$bs:solid) {
+  border: $bw $bs $bc; 
+}
